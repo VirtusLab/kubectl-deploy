@@ -8,7 +8,7 @@ The way it works is similar to tiller-less [Helm 3](https://github.com/helm/comm
 - follows the standard [go-template](https://golang.org/pkg/text/template/) API 
 - adds [custom render functions](https://github.com/VirtusLab/render/blob/master/README.md#notable-standard-and-sprig-functions)
 - provides Secret Management via [crypt](https://github.com/VirtusLab/crypt)
-- uses native Kubernetes Auth mechanism (everything is done via `kubectl`)
+- uses native Kubernetes authorization mechanism (everything is done via `kubectl`)
 
 ## Installation
 
@@ -42,7 +42,7 @@ Flags:
   -c, --context string     k8s context (optional)
   -d, --debug              enable debug logging level output (optional)
       --dry-run            If true, only print the object that would be sent, without sending it
-  -f, --file string        If true, only print the object that would be sent, without sending it
+  -f, --file string        k8s manifest or directory
   -h, --help               help for kubectl
   -n, --namespace string   k8s namespace (optional)
   -t, --trace              enable trace logging level output (optional)
