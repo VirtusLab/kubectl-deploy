@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/VirtusLab/kubectl-deploy/constants"
 	"github.com/VirtusLab/kubectl-deploy/internal"
-	"kubectl-deploy/plugin"
+	"github.com/VirtusLab/kubectl-deploy/plugin"
 	"os"
 
 	"github.com/spf13/cobra"
@@ -35,7 +35,7 @@ func main() {
 		},
 	}
 
-	deployCmd.PersistentFlags().StringVarP(&file, fileParameterName, "f", "", "If true, only print the object that would be sent, without sending it")
+	deployCmd.PersistentFlags().StringVarP(&file, fileParameterName, "f", "", "k8s manifest or directory")
 	if err := deployCmd.MarkPersistentFlagRequired(fileParameterName); err != nil {
 		os.Exit(1)
 	}
